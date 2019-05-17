@@ -1,0 +1,245 @@
+
+
+.animated {
+  -webkit-animation-duration: 1.25s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both !important;
+  animation-fill-mode: both !important;
+  opacity:0;
+}
+
+// SlideInRight
+
+@keyframes slideInLeft {
+  from {
+    transform:translateX(-100%);
+    opacity:1;
+  }
+
+  to {
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft{
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  animation-fill-mode: both !important;
+}
+
+
+// SlideInLeft
+
+
+
+
+// SlideInTop
+
+@keyframes slideInDown {
+  from {
+    transform:translateY(-100%);
+    opacity:1;
+  }
+
+  to {
+    transform:translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  animation-fill-mode: both !important;
+}
+
+
+
+
+@keyframes slideInUp {
+  from {
+    transform:translateY(100%);
+    opacity:1;
+  }
+
+  to {
+    transform:translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  animation-fill-mode: both !important;
+}
+
+// FadeIn
+
+
+
+// DropIn Staggered
+
+
+@keyframes colourChange {
+  from {
+    opacity:1;
+    color: initial;
+  }
+
+  to {
+    color: $primary-link-color;
+    opacity:1;
+  }
+}
+
+.colourChange {
+  -webkit-animation-name: colourChange;
+  animation-name: colourChange;
+  animation-fill-mode: both !important;
+}
+
+
+
+
+
+@keyframes glowing {
+  0% { opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { opacity: 0.25;}
+}
+
+@keyframes expand {
+  0% {
+     transform-origin:center;
+     transform: scaleX(0);
+   }
+  100% {
+     transform-origin:center;
+     transform: scaleX(1);
+   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-fill-mode: both !important;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+@keyframes slide-down {
+    0% {
+        height:0;
+    }
+    100% {
+        height: 1em;
+    }
+}
+
+
+@keyframes scaleIn {
+    0% {
+        transform:scale(0);
+        opacity:0;
+    }
+    80% {
+        transform:scale(1.1);
+        opacity:0.5;
+    }
+    100% {
+      transform:scale(1);
+      opacity:1;
+    }
+}
+
+
+
+
+@keyframes slide-up {
+    0% {
+        opacity: 1;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+
+@keyframes fontSize {
+    0% {
+        opacity: 0;
+        font-size:1em;
+    }
+    100% {
+        opacity: 1;
+        font-size:2em;
+    }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+@keyframes growHeight {
+  0% {
+    height:0;
+  }
+
+  100% {
+    height:80%;
+  }
+}
+
+
+@keyframes dash {
+  0% {
+    fill:transparent;
+    stroke: white;
+  }
+  75% {
+    fill:transparent;
+  }
+ 100% {
+   stroke: white;
+   fill: white;
+   stroke-dashoffset: 0;
+ }
+}
+
+
+@keyframes bob {
+  0% {
+    transform:translateY(0);
+  }
+  50% {
+    transform:translateY(2px);
+    opacity:0.6;
+  }
+ 100% {
+   transform:translateY(0);
+ }
+}

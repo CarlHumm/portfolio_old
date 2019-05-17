@@ -1,0 +1,82 @@
+
+
+$btn-width: 150px !default;
+$btn-height: 50px !default;
+$colour: $primary-link-color !default;
+
+[class^="btn-"] {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1rem;
+  overflow: hidden;
+  border: 1px solid currentColor;
+  width:100%;
+  height: $btn-height;
+  max-width: $btn-width;
+  color: $colour;
+  text-transform: uppercase;
+  transition: color 0.6s ease-in-out;
+  &:after {
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background-color: $primary-link-color;
+    transform:translateX(-100%);
+    z-index:-1;
+    transition: transform 0.4s ease-in-out, background 0.4s ease-in-out;
+  }
+  &:hover {
+    color:white;
+    &:after {
+      transform:translateX(0);
+    }
+  }
+
+  i {
+    display:none;
+  }
+}
+
+.btn-hero {
+  color:white;
+  &:after {
+    background-color:white;
+  }
+  &:hover {
+    color:black;
+    &:after {
+      transform:translateX(0);
+      background-color:white;
+    }
+}
+}
+.btn-primary {
+  z-index:2;
+}
+
+.btn-submit {
+  background-color:$primary-link-color;
+  color:white;
+  cursor:pointer;
+  transition:0.4s ease-in-out;
+
+}
+.submitted {
+  background-color:#1bbb43;
+}
+
+[class^="btn-"]:hover {
+    span {
+      display:none;
+    }
+    i {
+      display:block;
+      font-size:1.2rem;
+    }
+}
