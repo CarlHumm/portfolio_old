@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from './Banner';
-import Person from '../../scss/img/svg/person-glasses.svg';
+import Banner from './Banner.js';
+import Person from '../../media/person-glasses.svg';
 const BannerHome = () => {
   return(
   <Banner

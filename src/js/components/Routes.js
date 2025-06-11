@@ -4,9 +4,9 @@ import React from 'react';
 import {Route, Switch} from "react-router-dom";
 
 // Page Components
-import HomePage from './Home';
-import SinglePage from './Single';
-import NoMatch from './404';
+import HomePage from './Home.js';
+import SinglePage from './Single.js';
+import NoMatch from './404.js';
 
 const Routes = () => {
   return(

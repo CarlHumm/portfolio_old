@@ -1,22 +1,16 @@
 import React from 'react';
-import BannerHome from './BannerHome';
-import FilterableProjects from './FilterableProjects';
-import ContactForm from './ContactSection'
-import Widgets from './SocialWidgets';
-import Avatar from '../../scss/img/avatar/avatar.PNG';
+import BannerHome from './BannerHome.js';
+import FilterableProjects from './FilterableProjects.js';
+import ContactForm from './ContactSection.js'
+import Widgets from './SocialWidgets.js';
+import Avatar from '../../media/avatar.PNG';
 class Home extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
-
-
-
   componentDidMount() {
-
-
-
 
     const threshold= {
       threshold: 0.55

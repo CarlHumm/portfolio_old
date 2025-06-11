@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Dialog from './Dialog';
-import FormErrors from './FormError';
+import Dialog from './Dialog.js';
+import FormErrors from './FormError.js';
 
 class ContactForm extends Component {
   constructor() {
@@ -19,7 +19,6 @@ class ContactForm extends Component {
     messageValid: false,
     formValid: false
     }
-    // BINDINGS
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -80,7 +79,7 @@ handleSubmit(e) {
   })
 
   var check = document.querySelector('.field-email-verify').value;
-  var formData = new FormData();
+  const formData = new URLSearchParams();
   formData.append('name', this.state.name);
   formData.append('email', this.state.email);
   formData.append('email_verify', check);
@@ -88,8 +87,8 @@ handleSubmit(e) {
 
   let url = 'php/testmail.php';
   fetch(url, {
-    method: 'POST', // or 'PUT'
-    body: formData, // data can be `string` or {object}!
+    method: 'POST', 
+    body: formData, 
   }).then(response => {
     console.log('Success:', JSON.stringify(response));
     this.setState({
@@ -117,7 +116,7 @@ handleSubmit(e) {
       <div className="panel panel-default">
          <FormErrors formErrors={this.state.formErrors} />
       </div>
-        <input type="text" id="name" name="name" onChange={this.handleChange} className={`field-user ${this.errorClass(this.state.formErrors.name)}`} name="name" placeholder="Name..." required></input>
+        <input type="text" id="name" onChange={this.handleChange} className={`field-user ${this.errorClass(this.state.formErrors.name)}`} name="name" placeholder="Name..." required></input>
         <input type="email" id="email" onChange={this.handleChange} name="email"  className={`field-email ${this.errorClass(this.state.formErrors.email)}`}  placeholder="Email Address..." required></input>
         <input type="email" id="verify" onChange={this.handleChange} name="email_verify" className="field-email-verify"></input>
         <textarea id="message" name="message"  className={`field-message ${this.errorClass(this.state.formErrors.message)}`}  onChange={this.handleChange} maxLength="500" placeholder="Your message.." required></textarea>

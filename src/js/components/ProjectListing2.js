@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
-import ProjectItem from './ProjectItem';
-import TestImage from '../../img/Homepage.png';
+import ProjectItem from './ProjectItem.js';
+import TestImage from '../../media/Homepage.png';
 
 class ProjectListing extends Component {
   constructor(props) {

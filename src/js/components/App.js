@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../../scss/index.scss';
 import { BrowserRouter as Router} from "react-router-dom";
-import Header from './Header';
-import Footer from './Footer';
-import Routes from './Routes';
+import Header from './Header.js';
+import Footer from './Footer.js';
+import Routes from './Routes.js';
 class App extends Component {
 
 componentDidMount() {

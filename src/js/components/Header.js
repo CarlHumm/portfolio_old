@@ -18,12 +18,6 @@ class Header extends React.Component {
   render() {
   return(
     <header className="top-header">
-    <div className="alert-under-dev">
-      <p> This site is under development and scheduled to be updated soon </p>
-    </div>
-    <div className="notification">
-
-    </div>
     <div className="top-bar">
     <a href="#contact" data-scroll="true">
       <i class="fas fa-envelope"></i>

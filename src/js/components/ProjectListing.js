@@ -1,8 +1,8 @@
 
 import React, {Component} from 'react';
-import ProjectItem from './ProjectItem';
+import ProjectItem from './ProjectItem.js';
 import { CSSTransition } from 'react-transition-group';
-import Modal from './Modal';
+import Modal from './Modal.js';
 
 class ProjectListing extends Component {
   constructor(props) {

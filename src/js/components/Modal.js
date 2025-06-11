@@ -28,7 +28,7 @@ e.target.parentNode.style.border = "4px solid #dedede";
       <div onClick={this.props.closeModal} className={ this.props.isOpen ? "overlay visible": "overlay"}></div>
       <div className="modal animated slideInUp">
         <figure className="modal-image">
-          <img src={`static/media/${this.props.selected[0].imgURL}`} alt="image here"></img>
+          <img src={`${process.env.REACT_APP_MEDIA_URL}/${this.props.selected[0].imgURL}`} alt="image here"></img>
         </figure>
         <div className="modal-description">
             <h2> {this.props.selected[0].title} </h2>

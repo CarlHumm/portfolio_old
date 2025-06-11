@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ProjectNavigation from './FilterNavigation';
-import ProjectListing from './ProjectListing';
+import ProjectNavigation from './FilterNavigation.js';
+import ProjectListing from './ProjectListing.js';
 
 class FilterableProjects extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class FilterableProjects extends Component {
 
 
   componentDidMount() {
-    fetch(`${process.env.PUBLIC_URL}/php/displayposts.php`)
+    fetch(`${process.env.REACT_APP_API_URL}/displayposts.php`)
     .then(res => res.json())
       .then(json => {
         this.setState({
@@ -45,7 +45,6 @@ class FilterableProjects extends Component {
         return project.category.indexOf('design') !== -1;
       });
 
-      // for each tag in design,
       this.setState({
         isOpen: true,
         selectedTags: this.state.design,

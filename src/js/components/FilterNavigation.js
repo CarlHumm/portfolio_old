@@ -10,9 +10,6 @@ constructor(props){
   this.howMany = this.howMany.bind(this);
 }
 
-
-
-
   howMany(tag) {
     let tagname = tag;
     let projects = this.props.projects;
