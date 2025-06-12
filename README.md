@@ -123,7 +123,7 @@ Restart Apache.
 - For development:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 - For production:
